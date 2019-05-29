@@ -511,7 +511,35 @@ struct nvram_pair router_defaults[] = {
 	{ "ddns2_ssl", "1" },
 	{ "asusddns_tos_agreement", "0" },
 
+#if defined(LANG_DEFAULT_BR)
+	{ "preferred_lang", "BR" },
+#elif defined(LANG_DEFAULT_CZ)
+	{ "preferred_lang", "CZ" },
+#elif defined(LANG_DEFAULT_DA)
+	{ "preferred_lang", "DA" },
+#elif defined(LANG_DEFAULT_DE)
+	{ "preferred_lang", "DE" },
+#elif defined(LANG_DEFAULT_ES)
+	{ "preferred_lang", "ES" },
+#elif defined(LANG_DEFAULT_FI)
+	{ "preferred_lang", "FI" },
+#elif defined(LANG_DEFAULT_FR)
+	{ "preferred_lang", "FR" },
+#elif defined(LANG_DEFAULT_NO)
+	{ "preferred_lang", "NO" },
+#elif defined(LANG_DEFAULT_PL)
+	{ "preferred_lang", "PL" },
+#elif defined(LANG_DEFAULT_RU)
+	{ "preferred_lang", "RU" },
+#elif defined(LANG_DEFAULT_SV)
+	{ "preferred_lang", "SV" },
+#elif defined(LANG_DEFAULT_UK)
+	{ "preferred_lang", "UK" },
+#elif defined(LANG_DEFAULT_CN)
 	{ "preferred_lang", "CN" },
+#else
+	{ "preferred_lang", "" },
+#endif
 
 	{ "modem_rule", "0" },
 	{ "modem_prio", "1" },
