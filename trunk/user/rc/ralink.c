@@ -674,6 +674,12 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 	}
 	fprintf(fp, "Channel=%d\n", i_channel);
 
+#if defined (USE_MT7615_AP)
+	fprintf(fp, "E2pAccessMode=%d\n", 2);
+#endif
+#if defined (BOARD_K2P)
+	fprintf(fp, "DBDC_MODE=%d\n", 1);
+#endif
 	//AutoChannelSelect
 	i_val = (i_channel == 0) ? 2 : 0;
 	fprintf(fp, "AutoChannelSelect=%d\n", i_val);
