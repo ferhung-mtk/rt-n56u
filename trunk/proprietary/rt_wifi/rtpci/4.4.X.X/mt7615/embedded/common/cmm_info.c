@@ -3273,7 +3273,7 @@ VOID RTMPCommSiteSurveyData(
 		else if (wireless_mode == Ndis802_11OFDM5_N)
 			sprintf(msg+strlen(msg),"%-7s", "11a/n");
 		else if (wireless_mode == Ndis802_11OFDM5_AC)
-			sprintf(msg+strlen(msg),"%-8s", "11a/n/ac");
+			sprintf(msg+strlen(msg),"%-7s", "11a/n/ac");
 		else if (wireless_mode == Ndis802_11OFDM24)
 			sprintf(msg+strlen(msg),"%-7s", "11b/g");
 		else if (wireless_mode == Ndis802_11OFDM24_N)
@@ -3722,10 +3722,10 @@ VOID RTMPIoctlGetSiteSurvey(
 	}
 
 	sprintf(msg,"%s","\n");
-	sprintf(msg+strlen(msg),"Total=%-4d, 2G=%d, 5G=%d",pAdapter->ScanTab.BssNr,bss_2G_cnt,bss_5G_cnt);
-	sprintf(msg+strlen(msg),"%s","\n");
+	//sprintf(msg+strlen(msg),"Total=%-4d, 2G=%d, 5G=%d",pAdapter->ScanTab.BssNr,bss_2G_cnt,bss_5G_cnt);
+	//sprintf(msg+strlen(msg),"%s","\n");
 	sprintf(msg+strlen(msg),"%-4s%-4s%-33s%-20s%-23s%-9s%-7s%-7s%-3s\n",
-	    "No","Ch", "SSID", "BSSID", "Security", "Siganl(%)", "W-Mode", " ExtCH"," NT");
+	    "No","Ch", "SSID", "BSSID", "Security", "Signal(%)", "W-Mode", " ExtCH"," NT");
 
 #ifdef WSC_INCLUDED
 	sprintf(msg+strlen(msg)-1,"%-4s%-5s\n", " WPS", " DPID");
@@ -3784,7 +3784,7 @@ VOID RTMPIoctlGetSiteSurvey(
 			sprintf(msg+strlen(msg),"%-5s", " ");
 #endif /* WSC_INCLUDED */
 
-			sprintf(msg+strlen(msg),"%-7s\n", pBss->FromBcnReport ? " YES" : " NO");
+			sprintf(msg+strlen(msg),"%-10s\n", pBss->FromBcnReport ? " YES" : " NO");
 
 	}
 
@@ -3864,8 +3864,8 @@ VOID RTMPIoctlGetSiteSurvey(
 		return;
 	}
 	sprintf(msg,"%s","\n");
-	sprintf(msg+strlen(msg),"Total=%-4d",pAdapter->ScanTab.BssNr);
-	sprintf(msg+strlen(msg),"%s","\n");
+	//sprintf(msg+strlen(msg),"Total=%-4d",pAdapter->ScanTab.BssNr);
+	//sprintf(msg+strlen(msg),"%s","\n");
 	sprintf(msg+strlen(msg),"%-4s%-4s%-33s%-20s%-23s%-9s%-7s%-7s%-3s\n",
 	    "No","Ch", "SSID", "BSSID", "Security", "Siganl(%)", "W-Mode", " ExtCH"," NT");
 
@@ -3929,7 +3929,7 @@ VOID RTMPIoctlGetSiteSurvey(
 			sprintf(msg+strlen(msg),"%-5s", " ");
 #endif /* WSC_INCLUDED */
 
-			sprintf(msg+strlen(msg),"%-7s\n", pBss->FromBcnReport ? " YES" : " NO");
+			sprintf(msg+strlen(msg),"%-10s\n", pBss->FromBcnReport ? " YES" : " NO");
 
 	}
 
