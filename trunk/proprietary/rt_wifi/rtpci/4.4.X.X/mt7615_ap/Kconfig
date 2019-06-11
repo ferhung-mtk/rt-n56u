@@ -123,10 +123,10 @@ config MCAST_RATE_SPECIFIC
 #	bool "Auto Channel Selection Enhancement"
 #	depends on MT_AP_SUPPORT
 
-#config VOW_SUPPORT
-#	bool "MediaAir(VOW) support"
-#	depends on MT_AP_SUPPORT
-#	default y
+config VOW_SUPPORT
+	bool "MediaAir(VOW) support"
+	depends on MT_AP_SUPPORT
+	default y
 
 #config AIRPLAY_SUPPORT
 #	bool "AIRPLAY Support"

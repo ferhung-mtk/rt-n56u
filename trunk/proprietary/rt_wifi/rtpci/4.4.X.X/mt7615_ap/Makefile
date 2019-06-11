@@ -430,6 +430,7 @@ ap_objs := $(SRC_EMBEDDED_DIR)/ap/ap.o\
             $(SRC_EMBEDDED_DIR)/ap/ap_qload.o\
             $(SRC_EMBEDDED_DIR)/ap/ap_cfg.o\
             $(SRC_EMBEDDED_DIR)/ap/ap_nps.o\
+            $(SRC_EMBEDDED_DIR)/ap/ap_vow.o\
             $(SRC_DIR)/os/linux/ap_ioctl.o            
 
 ifeq ($(CONFIG_MBSS_SUPPORT),y)
