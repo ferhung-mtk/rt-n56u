@@ -642,7 +642,7 @@ INT rtmp_hif_cyc_init(RTMP_ADAPTER *pAd, UINT8 val)
 
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_INIT, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_INIT, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 		return FALSE;
 	}
@@ -2782,7 +2782,7 @@ VOID AntCfgInit(RTMP_ADAPTER *pAd)
 {
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_INIT, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_INIT, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 		return;
 	}

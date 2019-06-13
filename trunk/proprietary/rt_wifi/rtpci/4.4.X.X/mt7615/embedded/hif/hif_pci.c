@@ -11,7 +11,7 @@ INT NICInitPwrPinCfg(RTMP_ADAPTER *pAd)
 
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 
 		return FALSE;

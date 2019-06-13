@@ -2616,7 +2616,7 @@ BOOLEAN AsicCheckCommanOk(RTMP_ADAPTER *pAd, UCHAR Command)
 
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 		return FALSE;
 	}
@@ -2967,7 +2967,7 @@ BOOLEAN RT28xxPciAsicRadioOff(
 #endif
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_OFF, ("%s(): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_TRACE, ("%s(): Not support for HIF_MT yet!\n",
 					__FUNCTION__));
 		return TRUE;
 	}
@@ -3145,7 +3145,7 @@ int write_reg(RTMP_ADAPTER *ad, UINT32 base, UINT16 offset, UINT32 value)
 {
 	// TODO: shiang-7603
 	if (ad->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_OFF, ("%s(): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_TRACE, ("%s(): Not support for HIF_MT yet!\n",
 					__FUNCTION__));
 		return FALSE;
 	}
@@ -3165,7 +3165,7 @@ int read_reg(RTMP_ADAPTER *ad, UINT32 base, UINT16 offset, UINT32 *value)
 {
 	// TODO: shiang-7603
 	if (ad->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_OFF, ("%s(): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_HIF, CATHIF_PCI, DBG_LVL_TRACE, ("%s(): Not support for HIF_MT yet!\n",
 					__FUNCTION__));
 		return FALSE;
 	}

@@ -876,7 +876,7 @@ INT MtStopDmaRx(RTMP_ADAPTER *pAd, UCHAR Level)
 	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("====> %s\n", __FUNCTION__));
 
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_ERROR, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return 0;
 
@@ -911,7 +911,7 @@ INT MtStopDmaRx(RTMP_ADAPTER *pAd, UCHAR Level)
 
 	if (MTxCycle >= 2000)
 	{
-		MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_ERROR, ("%s:RX DMA busy!! DMA_CFG = 0x%08x\n", __FUNCTION__, MacReg));
+		MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s:RX DMA busy!! DMA_CFG = 0x%08x\n", __FUNCTION__, MacReg));
 	}
 
 	if (Level == RTMP_HALT)
@@ -935,7 +935,7 @@ INT MtStopDmaTx(RTMP_ADAPTER *pAd, UCHAR Level)
 	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("====> %s\n", __FUNCTION__));
 
 	// TODO: shiang-7603, shiang-usw
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_ERROR, ("%s(): Not support for HIF_MT yet!\n", __FUNCTION__));
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(): Not support for HIF_MT yet!\n", __FUNCTION__));
 	return 0;
 
 	for (MTxCycle = 0; MTxCycle < 2000; MTxCycle++)
@@ -1001,7 +1001,7 @@ VOID mt_bcn_buf_init(RTMP_ADAPTER *pAd)
 
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 	}
 

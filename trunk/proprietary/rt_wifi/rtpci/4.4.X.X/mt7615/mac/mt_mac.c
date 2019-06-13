@@ -876,7 +876,7 @@ VOID dump_mt_mac_cr(RTMP_ADAPTER *pAd)
 
 INT mt_mac_fifo_stat_update(RTMP_ADAPTER *pAd)
 {
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 					__FUNCTION__, __LINE__));
 
 	return FALSE;
@@ -1988,7 +1988,7 @@ VOID write_tmac_info_Cache(RTMP_ADAPTER *pAd, UCHAR *buf, TX_BLK *pTxBlk)
 {
 	// TODO: shiang-7603, for now, go following function first;
 	write_tmac_info_Data(pAd, buf, pTxBlk);
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not Finish yet for HT_MT!!!!\n", __FUNCTION__, __LINE__));
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not Finish yet for HT_MT!!!!\n", __FUNCTION__, __LINE__));
 	return;
 }
 
@@ -2034,7 +2034,7 @@ VOID mt_write_tmac_info_beacon(RTMP_ADAPTER *pAd, struct wifi_dev *wdev, UCHAR *
 INT rtmp_mac_set_band(RTMP_ADAPTER *pAd, int  band)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 						__FUNCTION__, __LINE__));
 	return FALSE;
 }
@@ -2051,7 +2051,7 @@ INT mt_mac_set_ctrlch(RTMP_ADAPTER *pAd, UINT8 extch)
 INT rtmp_mac_set_mmps(RTMP_ADAPTER *pAd, INT ReduceCorePower)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 					__FUNCTION__, __LINE__));
 	return FALSE;
 }
@@ -2062,7 +2062,7 @@ INT rtmp_mac_set_mmps(RTMP_ADAPTER *pAd, INT ReduceCorePower)
 VOID ReSyncBeaconTime(RTMP_ADAPTER *pAd)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 					__FUNCTION__, __LINE__));
 }
 
@@ -2307,7 +2307,7 @@ VOID mt_mac_bcn_buf_init(IN RTMP_ADAPTER *pAd, BOOLEAN bHardReset)
 	}
 
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 					__FUNCTION__, __LINE__));
 	return;
 }

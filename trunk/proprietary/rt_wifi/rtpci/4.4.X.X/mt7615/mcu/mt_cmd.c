@@ -1963,11 +1963,11 @@ INT32 MtCmdChannelSwitch(RTMP_ADAPTER *pAd, MT_SWITCH_CHANNEL_CFG SwChCfg)
 	}
 
 
-	MTWF_LOG(DBG_CAT_FW, DBG_SUBCAT_ALL, DBG_LVL_ERROR,
+	MTWF_LOG(DBG_CAT_FW, DBG_SUBCAT_ALL, DBG_LVL_TRACE,
         ("%s: control_chl = %d,control_ch2=%d, central_chl = %d DBDCIdx= %d, Band= %d \n",
         __FUNCTION__, SwChCfg.ControlChannel, SwChCfg.ControlChannel2, SwChCfg.CentralChannel, SwChCfg.BandIdx, SwChCfg.Channel_Band));
 
-	MTWF_LOG(DBG_CAT_FW, DBG_SUBCAT_ALL, DBG_LVL_ERROR,
+	MTWF_LOG(DBG_CAT_FW, DBG_SUBCAT_ALL, DBG_LVL_TRACE,
                 ("BW = %d,TXStream = %d, RXStream = %d, scan(%d)\n",
             SwChCfg.Bw, SwChCfg.TxStream, SwChCfg.RxStream, SwChCfg.bScan));
 
@@ -11139,7 +11139,7 @@ INT32 MtCmdPktBudgetCtrl(struct _RTMP_ADAPTER *pAd,UINT8 bss_idx,UINT16 wcid,UCH
 	UCHAR i;
 	UINT32 size = sizeof(pbc);
 
-	MTWF_LOG(DBG_CAT_CFG, DBG_SUBCAT_ALL, DBG_LVL_OFF,
+	MTWF_LOG(DBG_CAT_CFG, DBG_SUBCAT_ALL, DBG_LVL_TRACE,
 				(":%s: bssid(%d),wcid(%d),type(%d)\n", __FUNCTION__, bss_idx,wcid,type));
 
 	if(type >= PBC_TYPE_END){

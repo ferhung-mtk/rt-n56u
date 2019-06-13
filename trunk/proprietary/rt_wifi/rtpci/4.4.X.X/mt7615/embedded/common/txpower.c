@@ -540,7 +540,7 @@ VOID AsicGetTxPowerOffset(RTMP_ADAPTER *pAd, ULONG *TxPwr)
 
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_POWER, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_POWER, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 		return;
 	}
@@ -766,7 +766,7 @@ VOID AsicExtraPowerOverMAC(RTMP_ADAPTER *pAd)
 
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_POWER, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_POWER, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 		return;
 	}
@@ -1385,7 +1385,7 @@ VOID RTMPReadTxPwrPerRate(RTMP_ADAPTER *pAd)
 
 	// TODO: shiang-7603
 	if (pAd->chipCap.hif_type == HIF_MT) {
-		MTWF_LOG(DBG_CAT_POWER, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+		MTWF_LOG(DBG_CAT_POWER, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 		return;
 	}

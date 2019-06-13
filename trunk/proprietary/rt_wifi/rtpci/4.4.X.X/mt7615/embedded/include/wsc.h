@@ -172,7 +172,7 @@ static inline BOOLEAN WscCheckWSCHeader(UCHAR *pData)
 	{																	\
 		UINT32 __gpio_value, mask;											\
 		if (__pAd->chipCap.hif_type == HIF_MT) {\
-			MTWF_LOG(DBG_CAT_SEC, CATSEC_WPS, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n", __FUNCTION__, __LINE__));\
+			MTWF_LOG(DBG_CAT_SEC, CATSEC_WPS, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n", __FUNCTION__, __LINE__));\
 		} else {\
 			RTMP_IO_READ32(__pAd, GPIO_CTRL_CFG, (&__gpio_value));			\
 			if (RTMP_TEST_MORE_FLAG(__pAd, fRTMP_ADAPTER_WSC_PBC_PIN0))		\

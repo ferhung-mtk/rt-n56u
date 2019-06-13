@@ -232,7 +232,7 @@ return 0;
 INT MtAsicSetAutoFallBack(RTMP_ADAPTER *pAd, BOOLEAN enable)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return FALSE;
 }
@@ -423,7 +423,7 @@ VOID MtAsicSwitchChannel(RTMP_ADAPTER *pAd, MT_SWITCH_CHANNEL_CFG SwChCfg)
 VOID MtAsicAntennaSelect(RTMP_ADAPTER *pAd, UCHAR Channel)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 
 	return;
@@ -460,7 +460,7 @@ VOID MtAsicResetBBPAgent(RTMP_ADAPTER *pAd)
 #ifdef CONFIG_AP_SUPPORT
 VOID MtAsicSetMbssMode(RTMP_ADAPTER *pAd, UCHAR NumOfMacs)
 {
-    MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): No Function for HIF_MT!\n",
+    MTWF_LOG(DBG_CAT_HW, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): No Function for HIF_MT!\n",
                 __FUNCTION__, __LINE__));
     return;
 }
@@ -797,7 +797,7 @@ INT MtAsicSetRDG(RTMP_ADAPTER *pAd, BOOLEAN bEnable, UCHAR BandIdx)
 VOID MtAsicSetPiggyBack(RTMP_ADAPTER *pAd, BOOLEAN bPiggyBack)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return;
 }
@@ -860,7 +860,7 @@ INT MtAsicSetGPTimer(RTMP_ADAPTER *pAd, BOOLEAN enable, UINT32 timeout)
 INT MtAsicSetChBusyStat(RTMP_ADAPTER *pAd, BOOLEAN enable)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 
 	return TRUE;
@@ -1266,7 +1266,7 @@ VOID MtAsicSetEdcaParm(RTMP_ADAPTER *pAd, PEDCA_PARM pEdcaParm)
 INT MtAsicSetRetryLimit(RTMP_ADAPTER *pAd, UINT32 type, UINT32 limit)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return FALSE;
 }
@@ -1275,7 +1275,7 @@ INT MtAsicSetRetryLimit(RTMP_ADAPTER *pAd, UINT32 type, UINT32 limit)
 UINT32 MtAsicGetRetryLimit(RTMP_ADAPTER *pAd, UINT32 type)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 							__FUNCTION__, __LINE__));
 
 	return 0;
@@ -1362,7 +1362,7 @@ VOID MtAsicUpdateWCIDIVEIV(
 	IN ULONG		uEIV)
 {
 	// TODO: shiang-7603
-    MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_INFO, ("%s(%d): Not support for HIF_MT yet!\n",
+    MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 }
 
@@ -2360,7 +2360,7 @@ VOID MtAsicUpdateWcidAttributeEntry(
     //UINT32 wcid_attr_base = 0, wcid_attr_size = 0;
 
 	// TODO: shiang-7603
-        MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_INFO, ("%s(%d): , Wcid=%d, BssIdx=%d, KeyIdx=%d, Not support for HIF_MT yet!\n",
+        MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): , Wcid=%d, BssIdx=%d, KeyIdx=%d, Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__, Wcid, BssIdx, KeyIdx));
 	return;
 }
@@ -2440,7 +2440,7 @@ VOID MtAsicAddRemoveKey(RTMP_ADAPTER *pAd,MT_SECURITY_CTRL SecurityCtrl)
 VOID MtAsicAddPairwiseKeyEntry(RTMP_ADAPTER *pAd, UCHAR WCID, CIPHER_KEY *pKey)
 {
 	// TODO: shiang-7603
-        MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_INFO, ("%s(%d): Not support for HIF_MT yet!\n",
+        MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return;
 }
@@ -2512,7 +2512,7 @@ BOOLEAN MtAsicSendCommandToMcuBBP(
 	IN BOOLEAN		FlgIsNeedLocked)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return FALSE;
 }
@@ -2521,7 +2521,7 @@ BOOLEAN MtAsicSendCommandToMcuBBP(
 VOID MtAsicTurnOffRFClk(RTMP_ADAPTER *pAd, UCHAR Channel)
 {
 
-        MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+        MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 }
 
@@ -2534,7 +2534,7 @@ VOID MtAsicUpdateWAPIPN(
 	IN ULONG		 pn_high)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return;
 }
@@ -2572,7 +2572,7 @@ VOID MtAsicSetStreamMode(
 	IN BOOLEAN bEnabled)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return;
 }
@@ -2580,7 +2580,7 @@ VOID MtAsicSetStreamMode(
 
 VOID MtAsicStreamModeInit(RTMP_ADAPTER *pAd)
 {
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return;
 }
@@ -2592,7 +2592,7 @@ VOID MtAsicSetTxPreamble(RTMP_ADAPTER *pAd, USHORT TxPreamble)
 	//AUTO_RSP_CFG_STRUC csr4;
 
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 						__FUNCTION__, __LINE__));
 	return;
 }
@@ -2604,7 +2604,7 @@ INT MtAsicReadAggCnt(RTMP_ADAPTER *pAd, ULONG *aggCnt, int cnt_len)
 	NdisZeroMemory(aggCnt, cnt_len * sizeof(ULONG));
 
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return FALSE;
 }
@@ -2613,7 +2613,7 @@ INT MtAsicReadAggCnt(RTMP_ADAPTER *pAd, ULONG *aggCnt, int cnt_len)
 INT MtAsicSetRalinkBurstMode(RTMP_ADAPTER *pAd, BOOLEAN enable)
 {
 	// TODO: shiang-7603
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not support for HIF_MT yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not support for HIF_MT yet!\n",
 				__FUNCTION__, __LINE__));
 	return FALSE;
 }
@@ -3056,7 +3056,7 @@ INT MtAsicSetRxStream(RTMP_ADAPTER *pAd, UINT32 StreamNums, UCHAR BandIdx)
 
 #if defined(MT7615) || defined(MT7622)
 // TODO: shiang-MT7615, fix me!
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not finish Yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not finish Yet!\n",
 				__FUNCTION__, __LINE__));
 
 return 0;
@@ -3143,7 +3143,7 @@ INT MtAsicSetRxPath(RTMP_ADAPTER *pAd, UINT32 RxPathSel,UCHAR BandIdx)
 
 #if defined(MT7615) || defined(MT7622)
 // TODO: shiang-MT7615, fix me!
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not finish Yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not finish Yet!\n",
 				__FUNCTION__, __LINE__));
 
 return 0;
@@ -3304,7 +3304,7 @@ INT MtAsicSetRfFreqOffset(RTMP_ADAPTER *pAd, UINT32 FreqOffset)
 
 #if defined(MT7615) || defined(MT7622)
 // TODO: shiang-MT7615, fix me!
-	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("%s(%d): Not finish Yet!\n",
+	MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("%s(%d): Not finish Yet!\n",
 				__FUNCTION__, __LINE__));
 
 	return 0;
