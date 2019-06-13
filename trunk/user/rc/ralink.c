@@ -677,6 +677,27 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 #if defined (USE_MT7615_AP)
 	fprintf(fp, "E2pAccessMode=%d\n", 2);
 #endif
+#if defined (USE_WID_2G) && USE_WID_2G==7615
+	if (is_aband) {
+		if (nvram_wlan_get_int(1, "turbo_qam"))
+			fprintf(fp, "G_BAND_256QAM=%d\n", 1);
+		else
+			fprintf(fp, "G_BAND_256QAM=%d\n", 0);
+	}
+#endif
+#if defined (USE_WID_5G) && USE_WID_5G==7615
+	if (is_aband) {
+		if (nvram_wlan_get_int(1, "mumimo"))
+			fprintf(fp, "MUTxRxEnable=%d\n", 3);
+		else
+			fprintf(fp, "MUTxRxEnable=%d\n", 0);
+
+		if (nvram_wlan_get_int(1, "band_steering"))
+			fprintf(fp, "BandSteering=%d\n", 1);
+		else
+			fprintf(fp, "BandSteering=%d\n", 0);
+	}
+#endif
 #if defined (BOARD_K2P)
 	fprintf(fp, "DBDC_MODE=%d\n", 1);
 #endif

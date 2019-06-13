@@ -726,6 +726,10 @@
 #if defined(USE_MT76X2_AP)
 			{"wl_VgaClamp", "", NULL, EVM_RESTART_WIFI5},
 #endif
+#if defined(USE_MT7615_AP)
+			{"wl_band_steering", "", NULL, EVM_RESTART_WIFI5},
+			{"wl_mumimo", "", NULL, EVM_RESTART_WIFI5},
+#endif
 			{"wl_country_code", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_stream_tx", "", NULL, EVM_RESTART_WIFI5},
 			{"wl_stream_rx", "", NULL, EVM_RESTART_WIFI5},
@@ -809,6 +813,9 @@
 			{"rt_HT_AutoBA", "", NULL, EVM_RESTART_WIFI2},
 #if defined(USE_MT76X2_AP)
 			{"rt_VgaClamp", "", NULL, EVM_RESTART_WIFI2},
+#endif
+#if defined(USE_MT7615_AP)
+			{"rt_turbo_qam", "", NULL, EVM_RESTART_WIFI2},
 #endif
 			{"rt_country_code", "", NULL, EVM_RESTART_WIFI2},
 			{"rt_stream_tx", "", NULL, EVM_RESTART_WIFI2},
