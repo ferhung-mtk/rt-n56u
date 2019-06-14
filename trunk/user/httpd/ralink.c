@@ -1551,7 +1551,11 @@ ej_wl_scan_5g(int eid, webs_t wp, int argc, char **argv)
 			
 //			dbg("%s\n", site_line);
 			
+#if defined(USE_MT7615_AP)
+			sp+=line_len+2;
+#else			
 			sp+=line_len+1; // skip \n
+#endif
 			apCount++;
 		}
 	}
