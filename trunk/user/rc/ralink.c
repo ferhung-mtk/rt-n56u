@@ -674,9 +674,6 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 	}
 	fprintf(fp, "Channel=%d\n", i_channel);
 
-#if defined (USE_MT7615_AP)
-	fprintf(fp, "E2pAccessMode=%d\n", 2);
-#endif
 #if defined (USE_WID_2G) && USE_WID_2G==7615
 	if (is_aband) {
 		if (nvram_wlan_get_int(1, "turbo_qam"))
