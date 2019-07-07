@@ -1441,9 +1441,65 @@ UCHAR APAutoSelectChannel(
         IN BOOLEAN IsABand)
 {
 	UCHAR ch = 0;
-    
-	if (pAd->phy_op && pAd->phy_op->AutoCh)
-		ch = pAd->phy_op->AutoCh(pAd, Alg, IsABand);	
+#ifndef DBDC_MODE
+	UCHAR i;
+	UINT32	BusyTime;
+#endif /* !DBDC_MODE */
+	UCHAR	BandIdx = 0;    
+
+        MTWF_LOG(DBG_CAT_ALL, DBG_SUBCAT_ALL, DBG_LVL_TRACE,("%s----------------->\n",__FUNCTION__));
+  
+	/* passive scan channel 1-14. collect statistics */
+	
+	/*
+		In the autochannel select case. AP didn't get channel yet.
+		So have no way to determine which Band AP used by channel number.
+	*/
+
+        bbp_set_bw(pAd,BW_20,BandIdx);  
+	/* Init some structures before doing AutoChannelSelect() */
+	APAutoChannelInit(pAd);
+
+	if (( Alg == ChannelAlgRandom ) && (IsABand== TRUE))
+	{   /*for Dfs */
+		ch = SelectClearChannelRandom(pAd);
+	}
+	else
+	{
+/*sometimes dbdc mode will cuasing an error channelList in 2.4G, so directly use SelectBestChannel.*/
+#ifndef DBDC_MODE
+#ifdef MICROWAVE_OVEN_SUPPORT
+		pAd->CommonCfg.MO_Cfg.bEnable = FALSE;
+		AsicMeasureFalseCCA(pAd);
+#endif /* MICROWAVE_OVEN_SUPPORT */
+
+		/*find RSSI in each channel */
+		for (i=0; i<pAd->ChannelListNum; i++)
+		{
+			ULONG wait_time = 200; /* wait for 200 ms at each channel. */
+
+			AsicSwitchChannel(pAd, pAd->ChannelList[i].Channel, TRUE);
+            
+			AsicLockChannel(pAd, pAd->ChannelList[i].Channel);/*do nothing */
+            
+			pAd->ApCfg.current_channel_index = i;
+
+			pAd->ApCfg.AutoChannel_Channel = pAd->ChannelList[i].Channel;
+			
+			/* Read-Clear reset Channel busy time counter */
+			BusyTime = AsicGetChBusyCnt(pAd, 0);
+#ifdef AP_QLOAD_SUPPORT
+			/* QLOAD ALARM, ever alarm from QLOAD module */
+			if (QLOAD_DOES_ALARM_OCCUR(pAd))
+				wait_time = 400;
+#endif /* AP_QLOAD_SUPPORT */
+			OS_WAIT(wait_time);
+
+			UpdateChannelInfo(pAd, i,Alg);
+		}
+#endif /* !DBDC_MODE */
+		ch = SelectBestChannel(pAd, Alg);
+	}
 		
 	return ch;
 }
