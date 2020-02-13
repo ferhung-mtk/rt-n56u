@@ -695,7 +695,7 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 			fprintf(fp, "BandSteering=%d\n", 0);
 	}
 #endif
-#if defined (BOARD_K2P)
+#if defined (USE_MT7615_AP) && (DBDC_MODE)
 	fprintf(fp, "DBDC_MODE=%d\n", 1);
 #endif
 	//AutoChannelSelect
